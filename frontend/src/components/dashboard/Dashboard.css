@@ -1,0 +1,252 @@
+.dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Welcome Box */
+.welcome-box {
+  background: #1976d2;
+  color: white;
+  padding: 30px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.welcome-box h2 {
+  margin-bottom: 10px;
+}
+
+.welcome-box p {
+  margin: 5px 0;
+  opacity: 0.9;
+}
+
+/* Actions Box */
+.actions-box {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.stat-card h3 {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.stat-card small {
+  color: #999;
+}
+
+/* Cards */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn:hover {
+  opacity: 0.8;
+  transform: translateY(-1px);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-primary {
+  background: #1976d2;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #155a9e;
+}
+
+.btn-success {
+  background: #2e7d32;
+  color: white;
+}
+
+.btn-success:hover {
+  background: #1b5e20;
+}
+
+.btn-danger {
+  background: #d32f2f;
+  color: white;
+}
+
+.btn-danger:hover {
+  background: #b71c1c;
+}
+
+.btn-warning {
+  background: #ed6c02;
+  color: white;
+}
+
+.btn-warning:hover {
+  background: #b75d00;
+}
+
+/* Leave Item */
+.leave-item {
+  transition: background 0.2s;
+}
+
+.leave-item:hover {
+  background: #f5f5f5;
+}
+
+/* Status Colors */
+.text-success {
+  color: #2e7d32;
+}
+
+.text-primary {
+  color: #1976d2;
+}
+
+.text-danger {
+  color: #d32f2f;
+}
+
+.status-pending {
+  color: #ff9800;
+  font-weight: bold;
+}
+
+.status-approved {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.status-rejected {
+  color: #f44336;
+  font-weight: bold;
+}
+
+.status-cancelled {
+  color: #9e9e9e;
+  font-weight: bold;
+}
+
+.status-active {
+  color: #4caf50;
+}
+
+.status-inactive {
+  color: #f44336;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 10px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .actions-box {
+    flex-direction: column;
+  }
+
+  .actions-box .btn {
+    width: 100%;
+  }
+
+  .leave-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .leave-item > div:last-child {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .leave-item .btn {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome-box {
+    padding: 20px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  table th, table td {
+    padding: 8px 5px !important;
+  }
+}
